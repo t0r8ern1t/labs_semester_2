@@ -3,7 +3,7 @@
 
 using namespace std;
 
-bool IfPalindrom(string word) {
+bool IfPalindrom(string& word) {
 	if (word.length() <= 1) return 1;
 	string shortword = word.substr(1, word.length() - 2);
 	if ((word[0] == word[word.length() - 1]) && (IfPalindrom(shortword))) {

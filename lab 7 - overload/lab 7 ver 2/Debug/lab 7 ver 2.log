@@ -1,3 +1,5 @@
 ﻿  lab 7 ver 2.cpp
-D:\git\labs-semester2\lab 7 ver 2\lab 7 ver 2\lab 7 ver 2.cpp(103,35): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-  lab 7 ver 2.vcxproj -> D:\git\labs-semester2\lab 7 ver 2\Debug\lab 7 ver 2.exe
+D:\git\labs-semester2\lab 7 - overload\lab 7 ver 2\lab 7 ver 2.cpp(87,20): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+D:\git\labs-semester2\lab 7 - overload\lab 7 ver 2\lab 7 ver 2.cpp(89,36): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+D:\git\labs-semester2\lab 7 - overload\lab 7 ver 2\lab 7 ver 2.cpp(91,152): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  lab 7 ver 2.vcxproj -> D:\git\labs-semester2\lab 7 - overload\Debug\lab 7 ver 2.exe

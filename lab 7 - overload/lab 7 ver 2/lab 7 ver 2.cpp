@@ -8,9 +8,9 @@ public:
 	{
 		m_n = n;
 		m_m = m;
-		m_mat = new int* [m_n];
+		m_mat = new double* [m_n];
 		for (int i = 0; i < m_n; i++)
-			m_mat[i] = new int[m_m];
+			m_mat[i] = new double[m_m];
 	}
 
 	Matrix(const Matrix& mat)
@@ -18,9 +18,9 @@ public:
 		m_n = mat.m_n;
 		m_m = mat.m_m;
 
-		m_mat = new int* [m_n];
+		m_mat = new double* [m_n];
 		for (int i = 0; i < m_n; i++)
-			m_mat[i] = new int[m_m];
+			m_mat[i] = new double[m_m];
 
 		for (int i = 0; i < m_n; i++)
 			for (int j = 0; j < m_m; j++)
@@ -29,7 +29,6 @@ public:
 
 	Matrix& operator=(const Matrix& mat)
 	{
-		std::cout << "Operator =" << std::endl;
 
 		m_n = mat.m_n;
 		m_m = mat.m_m;
@@ -86,11 +85,12 @@ public:
 		if (m_m != m_n) return 0.5;
 		if (m_m == 1)
 			det = m_mat[0][0];
-		if (m_m == 2)
+		else if (m_m == 2)
 			det = m_mat[0][0] * m_mat[1][1] - m_mat[0][1] * m_mat[1][0];
-		if (m_m == 3)
+		else if (m_m == 3)
 			det = m_mat[0][0] * (m_mat[1][1] * m_mat[2][2] - m_mat[1][2] * m_mat[2][1]) - m_mat[0][1] * (m_mat[1][0] * m_mat[2][2] - m_mat[1][2] * m_mat[2][0]) + m_mat[0][2] * (m_mat[1][0] * m_mat[2][1] - m_mat[1][1] * m_mat[2][0]);
-		else return 0.5;
+		else if (m_m > 3)
+			return 0.5;
 		return det;
 	}
 
@@ -125,7 +125,7 @@ public:
 private:
 	int m_n, m_m;
 	int n;
-	int** m_mat;
+	double** m_mat;
 };
 
 std::istream& operator>>(std::istream& in, Matrix& mat)
@@ -149,6 +149,7 @@ std::ostream& operator<<(std::ostream& out, const Matrix& mat)
 
 int main()
 {
+	double eps = 0.01;
 	int m = 2, n = 2;
 	Matrix A(n, m);
 
@@ -166,20 +167,22 @@ int main()
 
 	C = A * B;
 	std::cout << C << std::endl;
-	std::cout << C.Deter() << std::endl;
+	double det = C.Deter();
+	if (abs(det - 0.5) > eps)
+		std::cout << C.Deter() << std::endl;
+	else std::cout << "deter() unavaliable" << std::endl;
 
 	Matrix x(3, 3);
 	std::cin >> x;
 	std::cout << x << std::endl;
-	double det = x.Deter();
-	if (det == 0.5) std::cout << "unavaliable" << std::endl;
+	det = x.Deter();
+	if (abs(det - 0.5) < eps) std::cout << "deter() unavaliable" << std::endl;
 	else
 		std::cout << det << std::endl;
 
-	if ((det != 0) && (det != 0.5))
-		std::cout << x.Reverse() << std::endl;  
-	/*матрица задана в целых числах поэтому при нахождении обратной 
-	значения элементов приводятся к типу int и могут не соответствовать действительности*/
+	if ((abs(det - 0) > eps) && (abs(det - 0.5) > eps))
+		std::cout << x.Reverse() << std::endl;
+	else std::cout << "imposiible to find reverse matrix" << std::endl;
 
 	Matrix y(2, 5);
 	std::cin >> y;

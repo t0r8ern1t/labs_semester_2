@@ -10,10 +10,10 @@ int main()
     BMP test(200, 200);
     test.Read("in.bmp");
     test.Decrypt();
-    test.Write("test.bmp");
-    test.Read("test.bmp");
+    test.Write("decrypted.bmp");
+    test.Read("decrypted.bmp");
     test.Encrypt();
-    test.Write("test2.bmp");
+    test.Write("encrypted.bmp");
     
     return 0;
 }

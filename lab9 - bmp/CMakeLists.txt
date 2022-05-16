@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.15) # Проверка версии CMake.
 									 # Если версия установленой программы
 									 # старее указаной, произайдёт аварийный выход.
 
-set(PROJECT_NAME BMP)				 # имя проекта		 
+set(PROJECT_NAME lab9)				 # имя проекта		 
 project("${PROJECT_NAME}")
 
 

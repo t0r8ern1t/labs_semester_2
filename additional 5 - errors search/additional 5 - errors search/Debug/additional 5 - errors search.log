@@ -1,0 +1,3 @@
+﻿  additional 5 - errors search.cpp
+D:\git\labs-semester2\additional 5 - errors search\additional 5 - errors search\additional 5 - errors search.cpp(24,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  additional 5 - errors search.vcxproj -> D:\git\labs-semester2\additional 5 - errors search\Debug\additional 5 - errors search.exe

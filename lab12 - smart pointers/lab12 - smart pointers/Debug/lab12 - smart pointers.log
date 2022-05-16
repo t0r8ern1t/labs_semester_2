@@ -1,0 +1,20 @@
+﻿  lab12 - smart pointers.cpp
+D:\git\labs-semester2\lab12 - smart pointers\lab12 - smart pointers\student.hpp(9,19): error C2065: Teacher: необъявленный идентификатор
+D:\git\labs-semester2\lab12 - smart pointers\lab12 - smart pointers\student.hpp(9,10): error C2923: std::weak_ptr: "Teacher" не является допустимым аргументом типа шаблон для параметра "_Ty"
+D:\git\labs-semester2\lab12 - smart pointers\lab12 - smart pointers\student.hpp(9): message : см. объявление "Teacher"
+D:\git\labs-semester2\lab12 - smart pointers\lab12 - smart pointers\student.hpp(12,12): error C2512: std::weak_ptr: нет подходящего конструктора по умолчанию
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2977,1): message : см. объявление "std::weak_ptr"
+D:\git\labs-semester2\lab12 - smart pointers\lab12 - smart pointers\student.hpp(26,25): error C2065: Teacher: необъявленный идентификатор
+D:\git\labs-semester2\lab12 - smart pointers\lab12 - smart pointers\student.hpp(26,14): error C2923: std::shared_ptr: "Teacher" не является допустимым аргументом типа шаблон для параметра "_Ty"
+D:\git\labs-semester2\lab12 - smart pointers\lab12 - smart pointers\student.hpp(26): message : см. объявление "Teacher"
+D:\git\labs-semester2\lab12 - smart pointers\lab12 - smart pointers\student.hpp(26,1): error C2662: std::shared_ptr<_Ty> std::weak_ptr<_Ty>::lock(void) noexcept const: невозможно преобразовать указатель "this" из "std::weak_ptr" в "const std::weak_ptr<_Ty> &"
+D:\git\labs-semester2\lab12 - smart pointers\lab12 - smart pointers\student.hpp(26,1): message : Причина: невозможно преобразовать "std::weak_ptr" в "const std::weak_ptr<_Ty>"
+D:\git\labs-semester2\lab12 - smart pointers\lab12 - smart pointers\student.hpp(26,38): message : Для преобразования требуется второй оператор пользовательского преобразования или конструктор
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(3048,32): message : см. объявление "std::weak_ptr<_Ty>::lock"
+D:\git\labs-semester2\lab12 - smart pointers\lab12 - smart pointers\student.hpp(26,36): error C2512: std::shared_ptr: нет подходящего конструктора по умолчанию
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(1504,1): message : см. объявление "std::shared_ptr"
+D:\git\labs-semester2\lab12 - smart pointers\lab12 - smart pointers\student.hpp(27,1): error C2662: remove_extent<_Ty>::type *std::_Ptr_base<_Ty>::get(void) noexcept const: невозможно преобразовать указатель "this" из "std::shared_ptr" в "const std::shared_ptr<_Ty> &"
+D:\git\labs-semester2\lab12 - smart pointers\lab12 - smart pointers\student.hpp(27,1): message : Причина: невозможно преобразовать "std::shared_ptr" в "const std::shared_ptr<_Ty>"
+D:\git\labs-semester2\lab12 - smart pointers\lab12 - smart pointers\student.hpp(27,18): message : Для преобразования требуется второй оператор пользовательского преобразования или конструктор
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(1270,30): message : см. объявление "std::_Ptr_base<_Ty>::get"
+D:\git\labs-semester2\lab12 - smart pointers\lab12 - smart pointers\student.hpp(28,1): error C3536: p: не может использоваться до инициализации

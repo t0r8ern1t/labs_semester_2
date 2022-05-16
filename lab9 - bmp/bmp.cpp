@@ -79,10 +79,6 @@ namespace ssh
         BMPINFO bmpInfo;
         in.read(reinterpret_cast<char*>(&bmpInfo), sizeof(BMPINFO));
 
-        /*Pixel** pixels = new Pixel * [bmpInfo.Height];
-        for (int i = 0; i < bmpInfo.Height; i++)
-            pixels[i] = new Pixel[bmpInfo.Width];*/
-
         for (int i = 0; i < bmpInfo.Height; i++)
         {
             for (int j = 0; j < bmpInfo.Width; j++)
